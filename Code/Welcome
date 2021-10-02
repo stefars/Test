@@ -1,2 +1,26 @@
-x = input("Enter your name:")
-print("Welcome "+x)
+from tkinter import *
+
+root = Tk()
+
+root.title('Welcoming window')
+
+e = Entry(root)
+e.pack()
+
+
+
+
+def myClick():
+    myLabel = Label(root, text="Congratulations!")
+    myLabel.pack()
+
+
+
+myButton = Button(root, text="Click me", command=myClick) 
+myButton.pack()
+
+
+
+
+root.mainloop()
+
