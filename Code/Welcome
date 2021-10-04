@@ -1,26 +1,41 @@
-from tkinter import *
+import turtle
 
-root = Tk()
+turtle.pensize(7)
+turtle.pencolor("pink")
 
-root.title('Welcoming window')
+# Declaratii
+colors = ["pink","green","yellow","orange","red","blue","grey","black"]
+CONTOR = 0
+c = 0
+Create = True
+# Make squares
 
-e = Entry(root)
-e.pack()
+while Create:
+    i = 0
+    turtle.pencolor(colors[c])
+    c += 1
+    for i in range (0,4):
+        turtle.forward(100)
+        turtle.left(90)
+        i += 1
+    turtle.right(90)
+    CONTOR += 1
+    if CONTOR == 4:
+        Create = False
 
+turtle.right(45)
+CONTOR = 0
+Create = True
 
-
-
-def myClick():
-    myLabel = Label(root, text="Congratulations!")
-    myLabel.pack()
-
-
-
-myButton = Button(root, text="Click me", command=myClick) 
-myButton.pack()
-
-
-
-
-root.mainloop()
-
+while Create:
+    i = 0
+    turtle.pencolor(colors[c])
+    c += 1
+    for i in range (0,4):
+        turtle.forward(100)
+        turtle.left(90)
+        i += 1
+    turtle.right(90)
+    CONTOR += 1
+    if CONTOR == 4:
+        Create = False
